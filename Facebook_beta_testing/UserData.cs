@@ -9,6 +9,7 @@ namespace Facebook_beta_testing
     {
         public string email = "";
         public string password = "";
+        public string AutoIt_Path = "";
         public string data = "";
         public UserData()
         {
@@ -18,9 +19,9 @@ namespace Facebook_beta_testing
             }
 
             dynamic array = JsonConvert.DeserializeObject(data);
-            Console.WriteLine("Array::::" + array["email"]);
             email = array["email"];
             password = array["password"];
+            AutoIt_Path = array["AutoIt_Path"];
 
 
         }
