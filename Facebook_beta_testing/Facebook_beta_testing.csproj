@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="BaseTest.cs" />
+    <Compile Include="ExtraData.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,11 +100,13 @@
     <Compile Include="UserData.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\ExtraData.json" />
     <None Include="Data\UserData.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="AutoIt\Fileupload.exe" />
     <Content Include="Reporter\dashboard.html" />
     <Content Include="Reporter\index.html" />
   </ItemGroup>
