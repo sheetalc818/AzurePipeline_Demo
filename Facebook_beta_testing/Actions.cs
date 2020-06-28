@@ -17,13 +17,13 @@ namespace Facebook_beta_testing
             Thread.Sleep(1000);
         }
 
-        public static void Upload(IWebDriver driver)
+        public static void Upload(IWebDriver driver,string message)
         {
             HomePage upload = new HomePage(driver);
-            UserData data = new UserData();
+            ExtraData data = new ExtraData();
             upload.WriteSomethingBox.Click();
             Thread.Sleep(500);
-            upload.WriteSomethingBox.SendKeys("New Change Script");
+            upload.WriteSomethingBox.SendKeys(message);
             Thread.Sleep(500);
 
             upload.DropPhotos.Click();
