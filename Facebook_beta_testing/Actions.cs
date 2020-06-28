@@ -27,7 +27,7 @@ namespace Facebook_beta_testing
 
             upload.DropPhotos.Click();
             Thread.Sleep(5000);
-            Process.Start("E:\\Fileupload.exe");
+            Process.Start(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\AutoIT Files\Fileupload.exe");
             Thread.Sleep(10000);
             upload.PostButton.Click();
             Thread.Sleep(10000);
