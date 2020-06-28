@@ -9,10 +9,10 @@ namespace Facebook_beta_testing
         public static void Login(IWebDriver driver)
         {
             LoginPage page = new LoginPage(driver);
-           // UsersData data = new UsersData();
+            UserData data = new UserData();
 
-            page.Email.SendKeys("8124217978");
-            page.Password.SendKeys("jocky1234#");
+            page.Email.SendKeys(data.email);
+            page.Password.SendKeys(data.password);
             page.Login.Click();
             Thread.Sleep(1000);
         }
