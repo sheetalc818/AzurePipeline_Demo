@@ -20,7 +20,6 @@ namespace Facebook_beta_testing
         public static void Upload(IWebDriver driver,string message)
         {
             HomePage upload = new HomePage(driver);
-            ExtraData data = new ExtraData();
             upload.WriteSomethingBox.Click();
             Thread.Sleep(500);
             upload.WriteSomethingBox.SendKeys(message);
@@ -28,11 +27,7 @@ namespace Facebook_beta_testing
 
             upload.DropPhotos.Click();
             Thread.Sleep(5000);
-<<<<<<< HEAD
             Process.Start(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\AutoIT Files\Fileupload.exe");
-=======
-            Process.Start(data.AutoIt_Path);
->>>>>>> 538361f5baf6568fc8a4c2bfdf627344b0f91b46
             Thread.Sleep(10000);
             upload.PostButton.Click();
             Thread.Sleep(10000);
