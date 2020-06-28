@@ -16,5 +16,21 @@ namespace Facebook_beta_testing
             page.Login.Click();
             Thread.Sleep(1000);
         }
+
+        public static void Upload(IWebDriver driver)
+        {
+            HomePage upload = new HomePage(driver);
+            upload.WriteSomethingBox.Click();
+            Thread.Sleep(500);
+            upload.WriteSomethingBox.SendKeys("New Change Script");
+            Thread.Sleep(500);
+
+            upload.DropPhotos.Click();
+            Thread.Sleep(5000);
+            Process.Start("E:\\Fileupload.exe");
+            Thread.Sleep(10000);
+            upload.PostButton.Click();
+            Thread.Sleep(10000);
+        }
     }
 }

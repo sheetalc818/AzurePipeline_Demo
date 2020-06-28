@@ -31,6 +31,14 @@ namespace Facebook_beta_testing
 
         }
 
+        [Test, Order(2)]
+        public void UploadStatusTest()
+        {
+            ExtentTest test = extent.CreateTest("UploadStatusTest").Info("UploadStatusTest");
+            Actions.Upload(driver);
+            test.Log(Status.Info, "UploadStatus Succesful");
+        }
+
         [OneTimeTearDown]
         public void ExtentClose()
         {
