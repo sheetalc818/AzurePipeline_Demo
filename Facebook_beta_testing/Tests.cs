@@ -25,7 +25,7 @@ namespace Facebook_beta_testing
         public void LoginTest()
         {
 
-            ExtentTest test = extent.CreateTest("LoginTest").Info("LoginTest");
+            ExtentTest test = extent.CreateTest("LoginTest").Info("Test To Login Into Aplication");
             Actions.Login(driver);
             test.Log(Status.Info, "Login Succesful");
             
@@ -34,7 +34,7 @@ namespace Facebook_beta_testing
         [Test, Order(2)]
         public void UploadStatusTest()
         {
-            ExtentTest test = extent.CreateTest("UploadStatusTest").Info("UploadStatusTest");
+            ExtentTest test = extent.CreateTest("UploadStatusTest").Info("Test To Upload The Status");
             Actions.Upload(driver);
             test.Log(Status.Info, "UploadStatus Succesful");
         }
