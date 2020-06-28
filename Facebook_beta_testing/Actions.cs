@@ -8,6 +8,7 @@ namespace Facebook_beta_testing
 {
     public static class Actions
     {
+        public static Screenshot loginScreenShot;
         public static void Login(IWebDriver driver)
         {
             LoginPage page = new LoginPage(driver);
@@ -18,8 +19,8 @@ namespace Facebook_beta_testing
             page.Login.Click();
             Thread.Sleep(1000);
 
-            Screenshot loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
-            loginScreenShot.SaveAsFile(FolderPaths.toScreenShotFolder,ScreenshotImageFormat.Jpeg);
+            loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
+            loginScreenShot.SaveAsFile(FolderPaths.loginScreenshot,ScreenshotImageFormat.Jpeg);
 
             
             
@@ -39,6 +40,9 @@ namespace Facebook_beta_testing
             Thread.Sleep(10000);
             upload.PostButton.Click();
             Thread.Sleep(10000);
+
+            loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
+            loginScreenShot.SaveAsFile(FolderPaths.statusUploadScreenshot, ScreenshotImageFormat.Jpeg);
         }
 
         public static void Logout(IWebDriver driver)
@@ -47,6 +51,9 @@ namespace Facebook_beta_testing
             logout.AccountSettings.Click();
             Thread.Sleep(1000);
             logout.LogoutButton.Click();
+
+            loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
+            loginScreenShot.SaveAsFile(FolderPaths.logoutScreenshot, ScreenshotImageFormat.Jpeg);
 
         }
     }
