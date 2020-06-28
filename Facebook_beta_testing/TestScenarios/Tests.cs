@@ -2,7 +2,7 @@
 
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
-
+using Facebook_beta_testing.Paths;
 using NUnit.Framework;
 
 namespace Facebook_beta_testing
@@ -16,7 +16,7 @@ namespace Facebook_beta_testing
         public void ExtendStart()
         {
             extent = new ExtentReports();
-            var htmlReporter = new ExtentHtmlReporter(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\Reporter\");
+            var htmlReporter = new ExtentHtmlReporter(FolderPaths.toExtentReoprter);
             extent.AttachReporter(htmlReporter);
 
         }
