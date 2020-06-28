@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -15,6 +16,12 @@ namespace Facebook_beta_testing
             page.Password.SendKeys(data.password);
             page.Login.Click();
             Thread.Sleep(1000);
+
+            Screenshot loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
+            loginScreenShot.SaveAsFile(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\ScreenShots\Login.jpeg",ScreenshotImageFormat.Jpeg);
+
+            
+            
         }
 
         public static void Upload(IWebDriver driver,string message)
