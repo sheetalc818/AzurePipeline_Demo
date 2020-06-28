@@ -32,5 +32,14 @@ namespace Facebook_beta_testing
             upload.PostButton.Click();
             Thread.Sleep(10000);
         }
+
+        public static void Logout(IWebDriver driver)
+        {
+            HomePage logout = new HomePage(driver);
+            logout.AccountSettings.Click();
+            Thread.Sleep(1000);
+            logout.LogoutButton.Click();
+
+        }
     }
 }

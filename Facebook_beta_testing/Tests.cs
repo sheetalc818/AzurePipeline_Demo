@@ -28,7 +28,7 @@ namespace Facebook_beta_testing
             ExtentTest test = extent.CreateTest("LoginTest").Info("LoginTest");
             Actions.Login(driver);
             test.Log(Status.Info, "Login Succesful");
-
+            
         }
 
         [Test, Order(2)]
@@ -37,6 +37,15 @@ namespace Facebook_beta_testing
             ExtentTest test = extent.CreateTest("UploadStatusTest").Info("UploadStatusTest");
             Actions.Upload(driver);
             test.Log(Status.Info, "UploadStatus Succesful");
+        }
+
+
+        [Test, Order(3)]
+        public void Logout()
+        {
+            ExtentTest test = extent.CreateTest("Logout").Info("Test To Logout From Application");
+            Actions.Logout(driver);
+            test.Log(Status.Info, "Logout Succesful");
         }
 
         [OneTimeTearDown]
