@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Facebook_beta_testing.Paths;
+using OpenQA.Selenium;
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -18,7 +19,7 @@ namespace Facebook_beta_testing
             Thread.Sleep(1000);
 
             Screenshot loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
-            loginScreenShot.SaveAsFile(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\ScreenShots\Login.jpeg",ScreenshotImageFormat.Jpeg);
+            loginScreenShot.SaveAsFile(FolderPaths.toScreenShotFolder,ScreenshotImageFormat.Jpeg);
 
             
             
@@ -34,7 +35,7 @@ namespace Facebook_beta_testing
 
             upload.DropPhotos.Click();
             Thread.Sleep(5000);
-            Process.Start(@"C:\Users\abhib\source\repos\Facebook_beta_testing\Facebook_beta_testing\AutoIT Files\Fileupload.exe");
+            Process.Start(FolderPaths.fromAutoITFolder);
             Thread.Sleep(10000);
             upload.PostButton.Click();
             Thread.Sleep(10000);
