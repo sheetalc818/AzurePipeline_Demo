@@ -10,13 +10,11 @@ namespace Facebook_beta_testing
         [OneTimeSetUp]
         public void Setup()
         {
-
             ChromeOptions opt = new ChromeOptions();
             opt.AddArgument("--disable-notifications");
             driver = new ChromeDriver(opt);
             driver.Manage().Window.Maximize();
             driver.Url = "https://www.facebook.com";
-
 
         }
     }

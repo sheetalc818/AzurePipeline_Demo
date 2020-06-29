@@ -1,6 +1,5 @@
 ﻿using Facebook_beta_testing.Paths;
 using OpenQA.Selenium;
-using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -22,8 +21,6 @@ namespace Facebook_beta_testing
             loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
             loginScreenShot.SaveAsFile(FolderPaths.loginScreenshot,ScreenshotImageFormat.Jpeg);
 
-            
-            
         }
 
         public static void Upload(IWebDriver driver,string message)
