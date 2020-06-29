@@ -34,7 +34,7 @@ namespace Facebook_beta_testing
 
             upload.DropPhotos.Click();
             Thread.Sleep(5000);
-            Process.Start(FolderPaths.fromAutoITFolder);
+            Process.Start(Config.fromAutoITFolder);
             Thread.Sleep(10000);
             upload.PostButton.Click();
             Thread.Sleep(10000);
