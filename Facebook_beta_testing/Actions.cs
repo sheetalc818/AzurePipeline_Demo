@@ -1,5 +1,5 @@
-﻿using AventStack.ExtentReports.Configuration;
-using Facebook_beta_testing.Paths;
+﻿
+using Facebook_beta_testing.Data;
 using OpenQA.Selenium;
 using System.Diagnostics;
 using System.Threading;
@@ -12,10 +12,10 @@ namespace Facebook_beta_testing
         public static void Login(IWebDriver driver)
         {
             LoginPage page = new LoginPage(driver);
-            // UserData data = new UserData();
-       
-            page.Email.SendKeys(Config.userName);
-            page.Password.SendKeys(Config.password);
+            
+
+            page.Email.SendKeys(Config.Credentials.userId);
+            page.Password.SendKeys(Config.Credentials.password);
             page.Login.Click();
             Thread.Sleep(1000);
 

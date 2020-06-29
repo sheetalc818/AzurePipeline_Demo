@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
     </Reference>
@@ -93,20 +96,22 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="Configurations\Config.cs" />
-    <Compile Include="Paths\FolderPaths.cs" />
+    <Compile Include="Data\ExcelDataAcces.cs" />
+    <Compile Include="Data\UsersData.cs" />
     <Compile Include="TestScenarios\BaseTest.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestScenarios\Tests.cs" />
-    <Compile Include="Data\UserData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Data\UserData.json" />
+    <None Include="Data\TestingData.xlsx" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="AutoIT Files\Fileupload.exe" />
     <Content Include="Reporter\dashboard.html" />

@@ -1,8 +1,5 @@
-﻿
-
-using AventStack.ExtentReports;
+﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
-using Facebook_beta_testing.Paths;
 using NUnit.Framework;
 
 namespace Facebook_beta_testing

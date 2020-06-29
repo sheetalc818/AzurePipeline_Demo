@@ -1,12 +1,13 @@
 ﻿
+using Facebook_beta_testing.Data;
+
 namespace Facebook_beta_testing
 {
     public static class Config
     {
         public static string URL = System.Configuration.ConfigurationManager.AppSettings["url"];
         
-        public static string userName = System.Configuration.ConfigurationManager.AppSettings["email"];
-        public static string password = System.Configuration.ConfigurationManager.AppSettings["pwd"];
+       
 
         public static string toExtentReoprter = System.Configuration.ConfigurationManager.AppSettings["extentReport"];
 
@@ -15,5 +16,13 @@ namespace Facebook_beta_testing
         public static string logoutScreenshot = System.Configuration.ConfigurationManager.AppSettings["logoutss"];
 
         public static string fromAutoITFolder = System.Configuration.ConfigurationManager.AppSettings["autoit"];
+
+        public static class Credentials
+        {
+            public static string userId = ExcelDataAcces.GetTestData("User_1").Username;
+            public static string password = ExcelDataAcces.GetTestData("User_1").Password;
+        }
+       
+        
     }
 }
