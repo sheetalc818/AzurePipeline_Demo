@@ -1,4 +1,5 @@
-﻿using Facebook_beta_testing.Paths;
+﻿using AventStack.ExtentReports.Configuration;
+using Facebook_beta_testing.Paths;
 using OpenQA.Selenium;
 using System.Diagnostics;
 using System.Threading;
@@ -11,15 +12,15 @@ namespace Facebook_beta_testing
         public static void Login(IWebDriver driver)
         {
             LoginPage page = new LoginPage(driver);
-            UserData data = new UserData();
-
-            page.Email.SendKeys(data.email);
-            page.Password.SendKeys(data.password);
+            // UserData data = new UserData();
+       
+            page.Email.SendKeys(Config.userName);
+            page.Password.SendKeys(Config.password);
             page.Login.Click();
             Thread.Sleep(1000);
 
             loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
-            loginScreenShot.SaveAsFile(FolderPaths.loginScreenshot,ScreenshotImageFormat.Jpeg);
+            loginScreenShot.SaveAsFile(Config.loginScreenshot,ScreenshotImageFormat.Jpeg);
 
         }
 
@@ -39,7 +40,7 @@ namespace Facebook_beta_testing
             Thread.Sleep(10000);
 
             loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
-            loginScreenShot.SaveAsFile(FolderPaths.statusUploadScreenshot, ScreenshotImageFormat.Jpeg);
+            loginScreenShot.SaveAsFile(Config.statusUploadScreenshot, ScreenshotImageFormat.Jpeg);
         }
 
         public static void Logout(IWebDriver driver)
@@ -50,7 +51,7 @@ namespace Facebook_beta_testing
             logout.LogoutButton.Click();
 
             loginScreenShot = ((ITakesScreenshot)driver).GetScreenshot();
-            loginScreenShot.SaveAsFile(FolderPaths.logoutScreenshot, ScreenshotImageFormat.Jpeg);
+            loginScreenShot.SaveAsFile(Config.logoutScreenshot, ScreenshotImageFormat.Jpeg);
 
         }
     }
