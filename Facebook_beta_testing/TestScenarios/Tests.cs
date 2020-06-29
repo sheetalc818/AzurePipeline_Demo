@@ -16,7 +16,7 @@ namespace Facebook_beta_testing
         public void ExtendStart()
         {
             extent = new ExtentReports();
-            var htmlReporter = new ExtentHtmlReporter(FolderPaths.toExtentReoprter);
+            var htmlReporter = new ExtentHtmlReporter(Config.toExtentReoprter);
             extent.AttachReporter(htmlReporter);
 
         }
