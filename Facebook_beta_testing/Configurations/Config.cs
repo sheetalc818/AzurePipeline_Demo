@@ -5,6 +5,10 @@ namespace Facebook_beta_testing
 {
     public static class Config
     {
+        
+        
+        public static string n = ExcelDataAcces.GetTestData("User_1").Username;
+
         public static string URL = System.Configuration.ConfigurationManager.AppSettings["url"];
         
        
@@ -17,12 +21,5 @@ namespace Facebook_beta_testing
 
         public static string fromAutoITFolder = System.Configuration.ConfigurationManager.AppSettings["autoit"];
 
-        public static class Credentials
-        {
-            public static string userId = ExcelDataAcces.GetTestData("User_1").Username;
-            public static string password = ExcelDataAcces.GetTestData("User_1").Password;
-        }
-       
-        
     }
 }

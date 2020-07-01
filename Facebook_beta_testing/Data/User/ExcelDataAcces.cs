@@ -1,5 +1,4 @@
-﻿using AventStack.ExtentReports.Configuration;
-using Dapper;
+﻿using Dapper;
 using System.Data.OleDb;
 using System.Linq;
 
@@ -19,7 +18,7 @@ namespace Facebook_beta_testing.Data
             using (var connection = new OleDbConnection(TestDataFileConection()))
             {
                 connection.Open();
-                var query = string.Format("select * from [Credentials$] where key='{0}'", keyName);
+                var query = string.Format("select * from [DataSet$] where key='{0}'", keyName);
                 var value = connection.Query<UsersData>(query).FirstOrDefault();
                 connection.Close();
                 return value;

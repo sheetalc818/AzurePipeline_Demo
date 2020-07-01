@@ -1,5 +1,6 @@
 ﻿
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 namespace Facebook_beta_testing
 {
@@ -9,7 +10,7 @@ namespace Facebook_beta_testing
         {
             PageFactory.InitElements(driver, this);
         }
-
+        
         [FindsBy(How = How.Name, Using = "email")]
         [CacheLookup]
         public IWebElement Email;
