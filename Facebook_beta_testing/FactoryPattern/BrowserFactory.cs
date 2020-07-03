@@ -1,5 +1,6 @@
 ﻿namespace Facebook_beta_testing.FactoryPattern
 {
+    using Facebook_beta_testing.ExceptionHandeling;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
@@ -8,20 +9,36 @@
         IWebDriver driver;
         public IWebDriver InitBrowser(string browser)
         {
-            switch (browser)
+            try
             {
-                case "chrome":
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.AddArgument("--disable-notifications");
-                    driver = new ChromeDriver(chromeOptions);                                        
-                    break;                    
-                case "firefox":
-                    FirefoxOptions firefoxOptions = new FirefoxOptions();                    
-                    firefoxOptions.SetPreference("dom.webnotifications.enabled", false);
-                    driver = new FirefoxDriver(firefoxOptions);                                   
-                    break;
-            }           
-            return driver;
+                if (browser == null)
+                {
+                    throw new CustomExceptions("Null VAlue is Not Allowed",CustomExceptions.ExceptionType.NULL_VALUE);
+                }
+                if(browser.Length == 0)
+                {
+                    throw new CustomExceptions("Empty String is not Allowed", CustomExceptions.ExceptionType.EMPTY_STRING_EXCEPTION);
+                }
+                switch (browser)
+                {
+                    case "chrome":
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.AddArgument("--disable-notifications");
+                        driver = new ChromeDriver(chromeOptions);
+                        break;
+                    case "firefox":
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        firefoxOptions.SetPreference("dom.webnotifications.enabled", false);
+                        driver = new FirefoxDriver(firefoxOptions);
+                        break;
+                }
+                return driver;
+            }
+            catch(CustomExceptions e)
+            {
+                throw new CustomExceptions(e.Message, CustomExceptions.ExceptionType);
+            }
+            
         }
     }
 }

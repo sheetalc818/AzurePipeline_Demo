@@ -98,6 +98,7 @@
     <Compile Include="Configurations\Config.cs" />
     <Compile Include="Data\User\ExcelDataAcces.cs" />
     <Compile Include="Data\User\UsersData.cs" />
+    <Compile Include="ExceptionHandeling\CustomExceptions.cs" />
     <Compile Include="FactoryPattern\BrowserFactory.cs" />
     <Compile Include="TestScenarios\BaseTest.cs" />
     <Compile Include="Pages\HomePage.cs" />

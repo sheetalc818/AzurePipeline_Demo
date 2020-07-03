@@ -12,7 +12,7 @@
         {
 
             BrowserFactory fact = new BrowserFactory();
-            driver = fact.InitBrowser("firefox");
+            driver = fact.InitBrowser("");
 
             driver.Manage().Window.Maximize();
             driver.Url = Config.URL;
