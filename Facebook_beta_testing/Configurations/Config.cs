@@ -7,7 +7,7 @@ namespace Facebook_beta_testing
     {
         
         
-        public static string n = ExcelDataAcces.GetTestData("User_1").Username;
+        public static string n = ExcelDataAcces.AccessDataFromFile("User_1").Username;
 
         public static string URL = System.Configuration.ConfigurationManager.AppSettings["url"];
         

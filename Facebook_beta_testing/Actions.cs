@@ -15,12 +15,12 @@ namespace Facebook_beta_testing
             switch (userNo)
             {
                 case 1:
-                    page.Email.SendKeys(ExcelDataAcces.GetTestData("User_1").Username);
-                    page.Password.SendKeys(ExcelDataAcces.GetTestData("User_1").Password);
+                    page.Email.SendKeys(ExcelDataAcces.AccessDataFromFile("User_1").Username);
+                    page.Password.SendKeys(ExcelDataAcces.AccessDataFromFile("User_1").Password);
                     break;
                 case 2:
-                    page.Email.SendKeys(ExcelDataAcces.GetTestData("User_2").Username);
-                    page.Password.SendKeys(ExcelDataAcces.GetTestData("User_2").Password);
+                    page.Email.SendKeys(ExcelDataAcces.AccessDataFromFile("User_2").Username);
+                    page.Password.SendKeys(ExcelDataAcces.AccessDataFromFile("User_2").Password);
                     break;
 
             }
@@ -36,6 +36,7 @@ namespace Facebook_beta_testing
 
         public static void Upload(IWebDriver driver,string message)
         {
+          
             HomePage upload = new HomePage(driver);
             upload.WriteSomethingBox.Click();
             Thread.Sleep(500);

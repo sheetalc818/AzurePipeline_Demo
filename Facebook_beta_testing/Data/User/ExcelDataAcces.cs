@@ -13,7 +13,7 @@ namespace Facebook_beta_testing.Data
             return can;
         }
 
-        public static UsersData GetTestData(string keyName)
+        public static UsersData AccessDataFromFile(string keyName)
         {
             using (var connection = new OleDbConnection(TestDataFileConection()))
             {

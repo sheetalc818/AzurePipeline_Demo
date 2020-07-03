@@ -1,10 +1,8 @@
-﻿using AventStack.ExtentReports;
-using AventStack.ExtentReports.Reporter;
-using NUnit.Framework;
-using System;
-
-namespace Facebook_beta_testing
+﻿namespace Facebook_beta_testing
 {
+    using AventStack.ExtentReports;
+    using AventStack.ExtentReports.Reporter;
+    using NUnit.Framework;
     [TestFixture]
     [Parallelizable]
     public class User_1_Test : BaseTest
@@ -22,6 +20,7 @@ namespace Facebook_beta_testing
         [Test, Order(1)]
         public void LoginTest()
         {
+            
             ExtentTest test = extent.CreateTest("LoginTest").Info("Test To Login Into Aplication");
             Actions.Login(driver,1);
             test.Log(Status.Pass, "Login Succesful");           
