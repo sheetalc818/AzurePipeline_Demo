@@ -21,7 +21,7 @@
         public void LoginTest()
         {
             
-            ExtentTest test = extent.CreateTest("LoginTest").Info("Test To Login Into Aplication");
+            ExtentTest test = extent.CreateTest("LoginTest").Info("Test To Login Into Aplication User 1");
             Actions.Login(driver,1);
             test.Log(Status.Pass, "Login Succesful");           
         }
@@ -30,7 +30,7 @@
         public void UploadStatusTest()
         {
             ExtentTest test = extent.CreateTest("UploadStatusTest").Info("Test To Upload The Status");
-            Actions.Upload(driver,"Hello World");
+            Actions.Upload(driver,"Hello World",1);
             test.Log(Status.Pass, "UploadStatus Succesful");
         }
 

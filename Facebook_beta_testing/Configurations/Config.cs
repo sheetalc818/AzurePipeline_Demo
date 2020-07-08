@@ -19,7 +19,9 @@ namespace Facebook_beta_testing
         public static string statusUploadScreenshot = System.Configuration.ConfigurationManager.AppSettings["statusss"];
         public static string logoutScreenshot = System.Configuration.ConfigurationManager.AppSettings["logoutss"];
 
-        public static string fromAutoITFolder = System.Configuration.ConfigurationManager.AppSettings["autoit"];
+
+        public static string fromAutoITFolder_user_one = System.Configuration.ConfigurationManager.AppSettings["autoit_user1"];
+        public static string fromAutoITFolder_user_two = System.Configuration.ConfigurationManager.AppSettings["autoit_user2"];
 
     }
 }

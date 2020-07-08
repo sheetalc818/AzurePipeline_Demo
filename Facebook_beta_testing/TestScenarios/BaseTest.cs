@@ -12,7 +12,7 @@
         {
 
             BrowserFactory fact = new BrowserFactory();
-            driver = fact.InitBrowser("");
+            driver = fact.InitBrowser("chrome");
 
             driver.Manage().Window.Maximize();
             driver.Url = Config.URL;

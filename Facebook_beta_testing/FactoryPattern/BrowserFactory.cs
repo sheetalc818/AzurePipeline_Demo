@@ -36,7 +36,7 @@
             }
             catch(CustomExceptions e)
             {
-                throw new CustomExceptions(e.Message, CustomExceptions.ExceptionType);
+                throw new CustomExceptions(e.Message, CustomExceptions.ExceptionType.NULL_VALUE);
             }
             
         }

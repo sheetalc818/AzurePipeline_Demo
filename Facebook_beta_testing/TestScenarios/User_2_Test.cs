@@ -9,19 +9,19 @@ namespace Facebook_beta_testing.TestScenarios
     [Parallelizable]
     public class User_2_Test : BaseTest
     {       
-        [Test, Order(1)]
+        [Test, Order(4)]
         public void LoginTest()
         {            
             Actions.Login(driver,2);
         }
-        [Test, Order(2)]
+        [Test, Order(5)]
         public void UploadStatusTest()
         {
 
-            Actions.Upload(driver, "Good Moring");
+            Actions.Upload(driver, "Good Moring",2);
 
         }
-        [Test, Order(3)]
+        [Test, Order(6)]
         public void Logout()
         {
            

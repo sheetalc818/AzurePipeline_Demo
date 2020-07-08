@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AutoIT Files\Fileupload.exe" />
+    <Content Include="AutoIT Files\Fileupload_User2.exe" />
     <Content Include="Reporter\dashboard.html" />
     <Content Include="Reporter\index.html" />
     <Content Include="ScreenShots\Login.jpeg" />
