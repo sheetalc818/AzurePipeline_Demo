@@ -13,7 +13,7 @@
             {
                 if (browser == null)
                 {
-                    throw new CustomExceptions("Null VAlue is Not Allowed",CustomExceptions.ExceptionType.NULL_VALUE);
+                    throw new CustomExceptions("Null Value is Not Allowed",CustomExceptions.ExceptionType.NULL_VALUE);
                 }
                 if(browser.Length == 0)
                 {

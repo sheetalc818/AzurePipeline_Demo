@@ -34,7 +34,7 @@ namespace Facebook_beta_testing
 
             MailMessage mail = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.live.com");
-            mail.From = new MailAddress("rishibodake@hotmailcom");
+            mail.From = new MailAddress("rishibodake@hotmail.com");
             mail.To.Add("rishibodake@hotmail.com");
             mail.Subject = "Test Mail....";
             mail.Body = "Mail With Attachment";

@@ -12,14 +12,11 @@
         {
 
             BrowserFactory fact = new BrowserFactory();
-            driver = fact.InitBrowser("chrome");
+            driver = fact.InitBrowser("firefox");
 
             driver.Manage().Window.Maximize();
             driver.Url = Config.URL;
 
-            
-
-
-        }
+       }
     }
 }
