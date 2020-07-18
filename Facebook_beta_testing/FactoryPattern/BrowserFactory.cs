@@ -23,7 +23,7 @@
                 {
                     case "chrome":
                         ChromeOptions chromeOptions = new ChromeOptions();
-                        chromeOptions.AddArgument("--disable-notifications");
+                        chromeOptions.AddArgument("--disable-notifications");                                      
                         driver = new ChromeDriver(chromeOptions);
                         break;
                     case "firefox":
