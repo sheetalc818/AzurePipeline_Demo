@@ -5,7 +5,7 @@
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
     public class BrowserFactory
-    {   
+    {   //New
         IWebDriver driver;
         public IWebDriver InitBrowser(string browser)
         {
